@@ -1,0 +1,109 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url("../img/background.jpg");
+    max-width: 1045px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #fff;
+}
+
+#datos, #tiempo-selector {
+    width: 400px;
+    height: 195px;
+}
+
+#tiempo-selector, #datos-meteo {
+    border-radius: 10px;
+}
+
+#datos {
+    position: relative;
+}
+
+
+div#tiempo {
+     padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div#tiempo-selector {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+select#selector-provincia {
+    width: 95%;
+    height: 35px;
+    border: 1px solid #3dbad6;
+    border-radius: 5px;
+}
+
+
+#datos-meteo {
+    background-color: #ffffff;
+    padding-left: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 195px;
+}
+
+#datos-meteo p, #datos-meteo h2 {
+    margin-top: 0;
+}
+
+
+.loading {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffffc9;
+    border-radius: 10px;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #000;
+  border-bottom-color: #3dbad6;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  }
+
+  @keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+  } 
+
+  @media screen and (max-width: 1024px) {
+    body {
+        background-size: unset;
+    }
+    
+    #tiempo {
+        flex-direction: column;
+    }
+    #datos {
+        margin-top: 20px;
+    }
+  }
+
+  
